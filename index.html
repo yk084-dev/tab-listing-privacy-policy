@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome拡張機能 Tab Listing のプライバシーポリシーです。">
+  <title>Tab Listing プライバシーポリシー</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #596579;
+      --line: #dbe2ec;
+      --accent: #2563eb;
+      --paper: #fff;
+      --background: #f5f7fb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--background);
+      font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+    }
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: 40px 48px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgb(23 32 51 / 7%);
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.25rem); line-height: 1.35; }
+    h2 { margin: 2.2em 0 .5em; padding-bottom: .25em; border-bottom: 1px solid var(--line); font-size: 1.3rem; line-height: 1.45; }
+    p { margin: .8em 0; }
+    ul { padding-left: 1.5em; }
+    li + li { margin-top: .25em; }
+    .date { margin: 0 0 2em; color: var(--muted); font-size: .95rem; }
+    .summary { padding: 16px 20px; border-left: 4px solid var(--accent); background: #eff6ff; }
+    code { padding: .12em .35em; border-radius: 4px; background: #eef2f7; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; overflow-wrap: anywhere; }
+    footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 600px) {
+      main { width: calc(100% - 20px); margin: 10px auto; padding: 24px 20px; border-radius: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tab Listing プライバシーポリシー</h1>
+    <p class="date">最終更新日: 2026年10月5日</p>
+
+    <p>本ポリシーは、Chrome拡張機能「Tab Listing」（以下「本拡張機能」）が取り扱う情報、その利用目的、保存先、共有先について説明します。</p>
+    <p class="summary">本拡張機能は、タブの整理・保存・復元に必要な範囲で、開いているタブのURLとタイトル、タブグループ情報を扱います。情報は端末内に保存します。Chrome同期の設定保存と、利用者が任意に有効化するGoogle Drive同期を除き、開発者のサーバーへ送信しません。初回利用時に拡張機能内で説明を表示し、利用者の同意後にデータ処理を開始します。</p>
+
+    <h2>1. 取り扱う情報</h2>
+    <ul>
+      <li>開いているタブのURL、タイトル、タブID、ウィンドウID</li>
+      <li>タブグループの名前、色、およびグループに含まれるタブの情報</li>
+      <li>保存したURLのURL、タイトル、アイコンURL、保存日時</li>
+      <li>保存したグループの名前、色、各タブのURLとタイトル</li>
+      <li>自動固定・除外ルールの名前やURLパターン、表示・並べ替えなどの設定</li>
+    </ul>
+    <p>自動固定を有効にした場合、本拡張機能は登録ルールとの照合と不足タブの復元に必要な範囲で、開いているタブを確認します。</p>
+    <p>本拡張機能は、Webページ本文、フォームへの入力内容、Cookie、パスワードを読み取りません。利用者がJSONバックアップを作成した場合、そのファイルは利用者の端末へダウンロードされます。</p>
+
+    <h2>2. 利用目的</h2>
+    <p>取り扱う情報は、タブの整理、URL一覧とタブグループの保存・復元、自動固定ルールの適用、および利用者が有効にした同期機能の提供に限って利用します。広告、行動分析、プロファイリング、情報の販売には利用しません。</p>
+
+    <h2>3. 保存先と共有先</h2>
+    <ul>
+      <li><strong>端末内:</strong> URL一覧、保存グループ、操作の取り消し情報は、Chrome拡張機能のローカルストレージに保存します。</li>
+      <li><strong>Chrome同期:</strong> 設定はChromeの同期ストレージに保存します。Chromeの同期が有効な場合、GoogleのChrome同期サービスを通じて同期されます。</li>
+      <li><strong>Google Drive（任意）:</strong> 利用者が設定画面から接続し、Drive同期を有効にした場合に限り、URL一覧と保存グループをGoogle Drive APIの本拡張機能専用領域（<code>appDataFolder</code>）へ送信・保存します。通常のDriveファイルやフォルダーにはアクセスしません。</li>
+    </ul>
+    <p>開発者が運営するサーバー、広告サービス、解析サービスへタブ情報や設定を送信しません。Chrome同期またはDrive同期を使う場合は、それぞれの機能に必要な情報がGoogleへ送信されます。</p>
+
+    <h2>4. 保存期間と削除</h2>
+    <p>端末内の保存URLと保存グループは、本拡張機能の画面から削除できます。設定の同期データはChrome同期の設定に従って管理されます。</p>
+    <p>Drive同期を切断すると、その後の自動同期を停止します。切断だけでは、すでにDriveへ保存されたデータは削除されません。保存済みデータはGoogle Driveの「設定」から「アプリを管理」を開き、本拡張機能の非表示アプリデータを削除してください。</p>
+    <p>ダウンロードしたJSONバックアップは、利用者が端末から削除するまで残ります。</p>
+
+    <h2>5. 権限の利用目的</h2>
+    <ul>
+      <li><code>tabs</code>、<code>tabGroups</code>: タブとタブグループを整理、保存、復元するため</li>
+      <li><code>storage</code>: URL一覧、グループ、設定を保存するため</li>
+      <li><code>contextMenus</code>: 右クリックメニューを表示するため</li>
+      <li><code>sidePanel</code>: 本拡張機能の画面をサイドパネルに表示するため</li>
+      <li><code>identity</code>: 利用者が選択した場合にGoogleアカウントでDrive同期を認証するため</li>
+      <li><code>https://www.googleapis.com/*</code>: 利用者が有効にしたDrive同期でGoogle APIと通信するため</li>
+    </ul>
+
+    <h2>6. Google APIデータの利用</h2>
+    <p>Google APIから受け取った情報の利用は、Chrome Web Store User Data Policy（Chrome Web Storeユーザーデータポリシー）のLimited Use要件に従います。</p>
+    <p><em>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</em></p>
+
+    <h2>7. ポリシーの変更</h2>
+    <p>本拡張機能の機能や情報の取り扱いを変更する場合は、本ポリシーを更新します。情報の利用方法に変更がある場合は、拡張機能内でも説明します。</p>
+
+    <h2>8. 問い合わせ</h2>
+    <p>本ポリシーまたは本拡張機能については、Chrome Web StoreのTab Listing掲載ページに記載するサポート窓口からお問い合わせください。</p>
+
+    <footer>本ポリシーはTab Listingの現在の実装を前提にしています。更新日: 2026年10月5日</footer>
+  </main>
+</body>
+</html>
